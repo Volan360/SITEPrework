@@ -50,19 +50,27 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
+    
     -https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    
     -https://www.w3schools.com/js/js_arrays.asp
+    
     -https://www.w3schools.com/cssref/css_colors.asp
+    
     -https://fdossena.com/?p=html5cool/buttons/i.frag
+    
     -https://stackoverflow.com/questions/44916184/how-to-let-a-button-next-to-a-text
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
+
 The biggest challenge that I encountered in building out the memory game website was my inexperience with HTML, CSS, and JavaScript. It was difficult at first to manipulate the data structures and objects at first, as I am well versed in Python and C++, but I haven't really had any experience with these three languages before. I was mostly learning as I went along, which seems to happen often. The way I overcame this actually stemmed from my experience with other programming languages. In most situations I knew what it was that I wanted to do (loop through an array, choose random numbers in a range, etc), but I didn't know how what methods or functions to call to get it done. Of course, no problem is unique, especially the very basic ones I was having, so there was lots of documentation that matched what I needed (and things I would need later but didn't realize it yet). Since I was asking very specific questions, it was easy to get the answers to them online, and expand my experience in this new area at the same time. I used a similar approach in the CodePath Android Studio class that I took, in which we programmed in Kotlin. 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
+
 Most of the work on our page was done by combining 1 HTML, CSS, and JavaScript file respectively, and I was wondering if there are solutions or langagues that combine these three into 1, as this seems like a lot of overhead. Another question I had pertains to having multiple pages. I assume each page would require a separate HTML, CSS and JavaScript file, but how do they "know" about eachother, and what lives on different pages. Other than that, everything is mostly clear so far.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
+
 I'd like to clean up my guess function to have less nested contitionals (maybe I could use switch cases or something). Other than that, I'd dive into adding custom files for the audio that plays from the buttons, and custom images for the buttons themselves. I have finals coming up, so I sadly couldn't dedicate the time to dive into those aspects just yet.
 
 
