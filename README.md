@@ -74,12 +74,12 @@ I'd like to clean up my guess function to have less nested contitionals (maybe I
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://uci.zoom.us/rec/play/qF0hgj76AeSa-pbucsBZ-uq8AtdPZnPcsBkHAkEID799C07a98OXpW_BL9poXUI90KPyYZt81XUCjRUv.gJDeQVBNBUOzArZc?continueMode=true&_x_zm_rtaid=xBSR-XE0Toiwv1wE7SeyuA.1647205791763.da990348e234d7c196ee7679744a6ec0&_x_zm_rhtaid=421)
 
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright Abdelrahman Sallam
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
