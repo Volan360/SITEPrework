@@ -34,6 +34,7 @@ p2 {
   display: inline-block;
 }
 
+
 button {
   padding: 10px;
   border-radius: 10px;
@@ -46,29 +47,45 @@ button {
 }
 
 #button1 {
-  background: lightblue
+  background: lightblue;
+  box-shadow:inset 0 -1em 0 -0.1em rgba(0,0,0,0.5);
 }
 #button2 {
-  background: lightyellow
+  background: yellow;
+    box-shadow:inset 0 -1em 0 -0.1em rgba(0,0,0,0.5);
 }
 #button3 {
-  background: lightgreen
+  background: lightgreen;
+    box-shadow:inset 0 -1em 0 -0.1em rgba(0,0,0,0.5);
 }
 #button4 {
-  background: lightpink
+  background: lightpink;
+    box-shadow:inset 0 -1em 0 -0.1em rgba(0,0,0,0.5);
+}
+#button5 {
+  background: burlywood;
+    box-shadow:inset 0 -1em 0 -0.1em rgba(0,0,0,0.5);
 }
 
 #button1:active, #button1.lit {
-  background: navy
+  background: navy;
+  box-shadow:inset 0 -1em 0 -1em rgba(0,0,0,0.17);
 }
 #button2:active, #button2.lit {
-  background: yellow
+  background: gold;
+  box-shadow:inset 0 -1em 0 -1em rgba(0,0,0,0.17);
 }
 #button3:active, #button3.lit {
-  background: darkgreen
+  background: darkgreen;
+  box-shadow:inset 0 -1em 0 -1em rgba(0,0,0,0.17);
 }
 #button4:active, #button4.lit {
-  background: red
+  background: red;
+  box-shadow:inset 0 -1em 0 -1em rgba(0,0,0,0.17);
+}
+#button5:active, #button5.lit {
+  background: darkgoldenrod;
+  box-shadow:inset 0 -1em 0 -1em rgba(0,0,0,0.17);
 }
 
 /* images and videos max out at full width */

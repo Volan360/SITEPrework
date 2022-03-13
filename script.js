@@ -4,34 +4,43 @@ const cluePauseTime = 333;
 const nextClueWaitTime = 1000;
 
 //Global Variables
-var pattern = [1, 3, 4, 2, 2, 1, 2, 3];
+var pattern = [2, 2, 4, 3, 2, 1, 2, 4]
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;
 var guessCounter = 0;
+var mistakes = 0;
+var canClick = false;
+
 
 
 function setPattern(num)
 {
   if(num == 1)
     {
-      pattern = [2, 2, 4, 3, 2, 1, 2, 4];
+      pattern = [5, 2, 4, 3, 2, 1, 5, 4];
     }
   if(num == 2)
     {
-      pattern = [1, 3, 4, 2, 2, 1, 2, 3];
+      pattern = [1, 3, 4, 5, 2, 5, 2, 3];
     }
   if(num == 3)
     {
       pattern = [3, 4, 2, 1, 1, 4, 2, 3];
+      for(let i=0; i< pattern.length; i++)
+      {
+        pattern[i] = Math.ceil(Math.random() * (5));
+      }
     }
 }
 
 function startGame(){
   //initialize game variables
+  mistakes = 0;
   progress = 0;
   gamePlaying = true;
+  document.getElementById("mistakes").textContent = "Lives Left: " + (3 - mistakes)
   // swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -61,6 +70,7 @@ function playSingleClue(btn){
 
 function playClueSequence(){
   guessCounter = 0;
+  canClick= false;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
@@ -68,12 +78,25 @@ function playClueSequence(){
     delay += clueHoldTime 
     delay += cluePauseTime;
   }
+  setTimeout(setClick, Math.abs(delay-70));
+}
+
+function setClick()
+{
+  canClick=true;
 }
 
 function guess(btn){
   console.log("user guessed: " + btn);
-  if(!gamePlaying){
-    return;
+  
+  if(!gamePlaying)
+    {
+      return
+    }
+  
+  if(!canClick){
+    alert("You can't click while the clue is playing!");
+    loseGame();
   }
   
   // add game logic here
@@ -98,7 +121,16 @@ function guess(btn){
     }
   else
     {
-      loseGame()
+      mistakes += 1;
+      document.getElementById("mistakes").textContent = "Lives Left: " + (3 - mistakes)
+      if(mistakes == 3)
+        {
+          loseGame() 
+        }
+      else
+        {
+          playClueSequence()
+        }
     }
 }
 
@@ -114,10 +146,11 @@ function winGame(){
 
 
 const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+  1: 230,
+  2: 321.59,
+  3: 430,
+  4: 550,
+  5: 650
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
